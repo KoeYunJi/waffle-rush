@@ -20,20 +20,20 @@ A 2D pixel-art platformer about a waffle on the run. As well as running and wall
 | **Timeline** | Sep–Dec 2024 (our first university project) |
 | **Scope** | 5 levels, 11 character and hazard animations, 3 playtest sessions |
 
-## My role: Tan Jun Quan
+## My role: Koe Yun Ji 
 
-**Team lead, gameplay programmer, and pixel artist**
+** Gameplay programmer**
 
-- **Led the 5-person team on our first university project.** Broke the game into tasks, drafted how each one should work (pseudocode and high-level overviews), and assigned them across the team.
-- **Set up the project.** Created the Visual Studio solution, integrated CProcessing, and wrote the first versions of the core files (`main.c`, `game.c`, `platform.c`, `utils.c`).
-- **Built the platform-crawling mechanic.** The player can crawl *inside* syrup platforms. Each platform is built as a hollow outline of colliders instead of a solid box, with the player's hitbox sized slightly smaller than the inside. Pressing `E` moves the player through the wall, and the enter and exit animations make it look like crawling in.
-- **Built wall sliding and wall jumping.** Holding toward a wall slows your fall. Jumping while sliding launches you away from the wall. A teammate added coyote time (a short grace window after leaving the wall) to make it feel fair.
-- **Created all the pixel art and animation:** idle, walk, jump, wall slide, crawl, enter platform, exit platform, respawn (waffle press), death by fire, death by falling, and the fire hazard.
+- **Built the camera system.** Developed a dynamic 2D camera inspired by Super Mario, allowing the camera to smoothly follow the player while maintaining appropriate boundaries and positioning throughout the level.
+- **Implemented the audio system.** Integrated audio playback and linked sound effects to various gameplay events, including player movement, interactions, power-ups, and environmental effects.
+- **Developed the power-up and attribute system.** Implemented gameplay logic for power-ups and designed a player attribute system that allows different power-ups to modify player abilities, properties, and gameplay mechanics.
 
+<!--
 **Where to look in the code:**
 [`platform.c`](GameTest/GameTest/platform.c) / [`platform.h`](GameTest/GameTest/platform.h) (platforms, crawling and player movement) ·
 [`game.c`](GameTest/GameTest/game.c) (core game loop) ·
 [`Level1.c`](GameTest/GameTest/Level1.c) (first level, used as the template for the others)
+-->
 
 ## Development notes
 
@@ -76,7 +76,7 @@ As a first-year team still learning the ropes, all five of us helped each other 
 | Name | Main contributions |
 |---|---|
 | Tan Jun Quan | Team lead, platform crawling, wall jump, pixel art and animation |
-| Koe Yun Ji | Camera, power-ups, level design, audio |
+| **Koe Yun Ji** | Camera, power-ups, level design, audio |
 | Manfred Sim | Menus, pause, scoring, serialization (saving and loading data) |
 | Muhammad Raziq | Hazards |
 | Muhammad Ashfer | Hub world (level select), level design, wall-jump coyote time |
